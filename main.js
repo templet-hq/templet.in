@@ -2,6 +2,7 @@
   'use strict';
 
   var ALLOWANCE = 40;   // mm, frame allowance per side
+  var MULLION = 60;     // mm, mullion width deducted from glass
   var BAR = 6000;       // mm, stock bar length
   var SCALE = 0.15;     // drawing units per mm
   var AX = 66, AY = 24, AW = 360, AH = 315; // drawing area on the sheet
@@ -25,7 +26,7 @@
     return {
       perimeter: 2 * (w + h) / 1000,
       mullion: mullions * h / 1000,
-      glass: (w - 2 * ALLOWANCE) * (h - 2 * ALLOWANCE) / 1e6,
+      glass: (w - 2 * ALLOWANCE - mullions * MULLION) * (h - 2 * ALLOWANCE) / 1e6,
       shutters: n,
       bars: bars.length
     };
