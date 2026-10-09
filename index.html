@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Templet - quotes, BOQ and shop drawings for manufacturers</title>
+<meta name="description" content="Quotes, BOQ and shop drawings from one parametric master - for made-to-order manufacturers">
+<link rel="canonical" href="https://templet.in/">
+<meta name="theme-color" content="#0A0A0A">
+<meta name="color-scheme" content="dark">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Templet">
+<meta property="og:url" content="https://templet.in/">
+<meta property="og:title" content="Templet - quotes, BOQ and shop drawings for manufacturers">
+<meta property="og:description" content="Quotes, BOQ and shop drawings from one parametric master - for made-to-order manufacturers">
+<meta property="og:image" content="https://templet.in/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Templet - Quotes, BOQ and shop drawings from one parametric master - for made-to-order manufacturers">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Templet - quotes, BOQ and shop drawings for manufacturers">
+<meta name="twitter:description" content="Quotes, BOQ and shop drawings from one parametric master - for made-to-order manufacturers">
+<meta name="twitter:image" content="https://templet.in/og.png">
+
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@600&family=Space+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="main.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<main id="main">
+
+  <header class="hero wrap">
+    <p class="wordmark">Templet</p>
+    <h1>Quotes, BOQ and shop drawings from one parametric <span class="nw">master -</span> for <span class="nw">made-to-order</span> manufacturers</h1>
+    <p class="actions">
+      <a class="btn" href="mailto:hello@templet.in">Talk to us</a>
+      <a class="link" href="#how">See how it works</a>
+    </p>
+  </header>
+
+  <section class="wrap" id="how" aria-labelledby="how-label">
+    <h2 class="label" id="how-label">How it works</h2>
+    <ol class="steps">
+      <li>
+        <span class="num">01</span>
+        <h3>Site dimensions in</h3>
+        <p>Your salesman enters the measurements and options at the customer's site.</p>
+      </li>
+      <li>
+        <span class="num">02</span>
+        <h3>One master, solved</h3>
+        <p>Your product logic, catalogue and price list live in one parametric master: a templet.</p>
+      </li>
+      <li>
+        <span class="num">03</span>
+        <h3>Every document out</h3>
+        <p>3D preview, quote, BOQ, cut list and shop drawings, from the same inputs, every time.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section class="wrap" id="demo" aria-labelledby="demo-label">
+    <h2 class="label" id="demo-label">One master, many outputs</h2>
+    <p class="caption">Illustration only. Real templets carry your profiles, stock lengths and rules.</p>
+
+    <div class="demo">
+      <div class="sheet">
+        <svg id="elev" viewBox="0 0 440 440" role="img" aria-labelledby="elev-title elev-desc">
+          <title id="elev-title">Window elevation</title>
+          <desc id="elev-desc">Elevation of a window frame 1500 mm wide and 1350 mm high with 2 shutters.</desc>
+          <defs>
+            <marker id="arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M0 1.5 10 5 0 8.5z"/>
+            </marker>
+          </defs>
+          <g class="frame">
+            <rect id="f-out" x="133.5" y="80.25" width="225" height="202.5"/>
+            <rect id="f-in" x="139.5" y="86.25" width="213" height="190.5"/>
+            <rect id="m1" x="243" y="86.25" width="6" height="190.5"/>
+            <rect id="m2" x="243" y="86.25" width="6" height="190.5" hidden/>
+          </g>
+          <g class="dim">
+            <path id="ext" d="M133.5 286.75V312.75M358.5 286.75V312.75M129.5 80.25H103.5M129.5 282.75H103.5"/>
+            <line id="dim-w" class="arrowed" x1="133.5" y1="308.75" x2="358.5" y2="308.75"/>
+            <line id="dim-h" class="arrowed" x1="107.5" y1="80.25" x2="107.5" y2="282.75"/>
+            <text id="txt-w" x="246" y="326.75">1500</text>
+            <text id="txt-h" x="97.5" y="181.5" transform="rotate(-90 97.5 181.5)">1350</text>
+          </g>
+          <g class="tb">
+            <path d="M296 386h132v42H296zM296 400h132M296 414h132"/>
+            <text class="tb-name" x="302" y="396.5">TEMPLET</text>
+            <text id="tb-size" x="302" y="410.5">1500 x 1350</text>
+            <text x="302" y="424.5">SCALE NTS</text>
+          </g>
+        </svg>
+      </div>
+
+      <div class="panel">
+        <form class="controls" id="controls" aria-label="Window inputs">
+          <div class="field">
+            <label for="w">Width</label>
+            <output id="w-out" for="w">1500 mm</output>
+            <input type="range" id="w" min="600" max="2400" step="50" value="1500" aria-valuetext="1500 mm">
+          </div>
+          <div class="field">
+            <label for="h">Height</label>
+            <output id="h-out" for="h">1350 mm</output>
+            <input type="range" id="h" min="600" max="2100" step="50" value="1350" aria-valuetext="1350 mm">
+          </div>
+          <fieldset class="seg">
+            <legend>Shutters</legend>
+            <label><input type="radio" name="n" value="2" checked><span>2 shutters</span></label>
+            <label><input type="radio" name="n" value="3"><span>3 shutters</span></label>
+          </fieldset>
+        </form>
+
+        <table class="qty">
+          <caption>Quantities</caption>
+          <tbody>
+            <tr><th scope="row">Frame perimeter</th><td><span id="q-per">5.70</span> m</td></tr>
+            <tr><th scope="row">Mullion length</th><td><span id="q-mul">1.35</span> m</td></tr>
+            <tr><th scope="row">Glass area</th><td><span id="q-gls">1.80</span> m<sup>2</sup></td></tr>
+            <tr><th scope="row">Shutter count</th><td><span id="q-sht">2</span></td></tr>
+            <tr><th scope="row">6 m bars, frame + mullions</th><td><span id="q-bar">2</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap" aria-labelledby="for-label">
+    <h2 class="label" id="for-label">Built for</h2>
+    <ul class="tags">
+      <li>Windows and doors</li>
+      <li>Railings and jali</li>
+      <li>Pergolas</li>
+      <li>Acoustic and decorative panels</li>
+      <li>Modular furniture</li>
+    </ul>
+    <p class="lede">If you quote from a rate card and a draughtsman redraws every order, a templet does both from one set of inputs.</p>
+  </section>
+
+  <section class="wrap contact" aria-labelledby="contact-h">
+    <h2 class="big" id="contact-h">Start with one product.</h2>
+    <p class="lede">We build the master on your catalogue. Write to us.</p>
+    <p><a class="email" href="mailto:hello@templet.in">hello@templet.in</a></p>
+  </section>
+
+</main>
+
+<footer class="wrap foot">
+  <p>&copy; 2026 Templet &middot; Tamil Nadu, India</p>
+</footer>
+</body>
+</html>
